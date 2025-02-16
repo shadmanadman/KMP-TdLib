@@ -1,5 +1,6 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -24,6 +25,10 @@ kotlin {
             baseName = "ComposeApp"
             isStatic = true
         }
+    }
+
+    targets.withType<KotlinNativeTarget> {
+        compilations["main"].cinterops.create("tdlib")
     }
     
     jvm("desktop")
