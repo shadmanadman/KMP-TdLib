@@ -1,0 +1,6 @@
+# Please don't forget to change the full root to your own path.
+package = tdlib
+headers = /Users/shadmanadman/AndroidStudioProjects/KMP-TDLIB/composeApp/native/include/td/telegram/td_json_client.h
+libraryPaths = /Users/shadmanadman/AndroidStudioProjects/KMP-TDLIB/composeApp/native/lib
+linkerOpts.osx = -L/Users/shadmanadman/AndroidStudioProjects/KMP-TDLIB/composeApp/native/lib/macOS -ltdjson
+linkerOpts.ios = -L/Users/shadmanadman/AndroidStudioProjects/KMP-TDLIB/composeApp/native/lib/iOS -ltdjson
