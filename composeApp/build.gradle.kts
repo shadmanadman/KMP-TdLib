@@ -79,6 +79,16 @@ android {
             isMinifyEnabled = false
         }
     }
+    externalNativeBuild {
+        cmake {
+            version = "3.31.1"
+            path = file("native/CMakeLists.txt")
+
+        }
+    }
+
+    ndkVersion = "28.0.12916984 rc3"
+
     sourceSets["main"].java.srcDirs("src/androidMain/java")
 
     compileOptions {
